@@ -1,0 +1,32 @@
+header.site-header
+  .container
+    .row
+      .col-md-4
+        include site-name
+        
+      .col-md-8
+        include social-list
+    
+    .row
+      .col-md-9
+        nav.site-nav(role="navigation")
+          ul.nav
+            li: a(href="#") Home
+            li: a(href="#") Family
+            li: a(href="#") Style
+            li: a(href="#") Food
+            li: a(href="#") Recipes
+            li: a(href="#") Health
+            li: a(href="#") Sports
+            li: a(href="#") Business
+            li: a(href="#") Contact
+            
+      .col-md-3
+        form(action="/", method="GET")
+          .input-group
+            label(for="searchForm")
+            input.form-control#searchForm(type="search", placeholder="Search...")
+            button.input-group-addon(type="submit"): i.fa.fa-search
+            
+            
+        

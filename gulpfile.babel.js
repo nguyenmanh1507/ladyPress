@@ -4,15 +4,60 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import autoprefixer from 'autoprefixer';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+gulp.task('views', () => {
+  return gulp.src('app/*.jade')
+    .pipe($.plumber())
+    .pipe($.jade({pretty: true}))
+    .pipe(gulp.dest('.tmp'))
+    .pipe(reload({stream: true}))
+  ;
+});
+
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.css')
+  const
+    bem = require('postcss-bem'),
+    precss = require('precss'),
+    fontMagician = require('postcss-font-magician'),
+    pxtorem = require('postcss-pxtorem'),
+    nested = require('postcss-nested'),
+    at2x = require('postcss-at2x'),
+    customMedia = require('postcss-custom-media'),
+    processors = [
+      precss,
+      bem({
+        style: 'bem',
+        separators: {
+          modifier: '--'
+        },
+        shortcuts: {
+          component: 'b',
+          descendent: 'e',
+          modifier: 'm'
+        }
+      }),
+      nested,
+      fontMagician,
+      pxtorem({
+        replace: true,
+        propWhiteList: []
+      }),
+      customMedia,
+      at2x,
+      autoprefixer
+    ]
+  ;
+
+  return gulp.src(['app/styles/main.css'])
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.sourcemaps.write())
+    .pipe($.postcss(processors))
+    .pipe($.cssnano({discardComments: {removeAll: true}}))
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
@@ -45,8 +90,8 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+gulp.task('html', ['views', 'styles', 'scripts'], () => {
+  return gulp.src('app/*.html', '.tmp/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
@@ -84,7 +129,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -98,10 +143,12 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
+    '.tmp/*.html',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/**/*.jade', ['views']);
   gulp.watch('app/styles/**/*.css', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -139,7 +186,7 @@ gulp.task('serve:test', ['scripts'], () => {
 
 // inject bower components
 gulp.task('wiredep', () => {
-  gulp.src('app/*.html')
+  gulp.src('app/layouts/*.jade')
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
     }))
