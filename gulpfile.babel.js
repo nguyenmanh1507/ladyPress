@@ -29,6 +29,7 @@ gulp.task('styles', () => {
     at2x         = require('postcss-at2x'),
     customMedia  = require('postcss-custom-media'),
     shortSize    = require('postcss-short-size'),
+    triangle     = require('postcss-triangle'),
     processors   = [
       precss,
       assets({
@@ -38,6 +39,7 @@ gulp.task('styles', () => {
         cachebuster: true
       }),
       shortSize,
+      triangle,
       bem({
         style: 'bem',
         separators: {

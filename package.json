@@ -34,6 +34,7 @@
     "postcss-nested": "^1.0.0",
     "postcss-pxtorem": "^3.3.1",
     "postcss-short-size": "^1.1.0",
+    "postcss-triangle": "^1.0.1",
     "precss": "^1.4.0",
     "wiredep": "^2.2.2"
   },
