@@ -13,9 +13,13 @@ $valencia: #DC4E41;
 $alizarinCrimson: #e52d27;
 $codGray: #1d1d1d;
 $vanillaIce: #ebbed7;
+$boulder: #a2a2a2;
 
 $colorPrimary: $hopbush;
+
 $colorText: $codGray;
+$colorTextLight: $boulder;
+
 $colorInputBG: $vanillaIce;
 
 /* FONTS */

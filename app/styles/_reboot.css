@@ -10,8 +10,21 @@ html {
 
 body {
   font-family: $fontPrimary;
+
+  background: $white resolve('light_grey.png') at-2x;
+}
+
+@for $i from 1 to 6 {
+  h$i {
+    font-weight: 400;
+  }
 }
 
 a {
+  color: $colorPrimary;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }

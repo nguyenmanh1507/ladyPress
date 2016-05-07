@@ -1,6 +1,7 @@
 /* BOX MODAL */
 @for $i from 1 to 10 {
   .mb$i {
+    display: block;
     margin-bottom: calc($baseSize * $i);
   }
 }
@@ -15,4 +16,12 @@
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+/* POSITION */
+.stick-bottom {
+  position: absolute;
+  bottom: 0;
+
+  width: calc(100% - 30px);
 }

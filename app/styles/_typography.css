@@ -1,3 +1,21 @@
+/* GENERAL */
+blockquote {
+  position: relative;
+
+  margin: 0;
+  padding: calc($baseSize / 2) 0 0 $baseSize;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: '\"';
+    font-family: $fontSpecial;
+    font-size: calc($baseSize * 2);
+  }
+}
+
 /* LIST INLINE */
 .list-inline {
   @extend clearPaddingAndMargin;
@@ -5,4 +23,21 @@
   li {
     display: inline-block;
   }
+}
+
+/* PARAGRAPHS */
+.text-link {
+  color: $colorPrimary;
+}
+
+.text-small {
+  font-size: calc($baseSize * 0.75);
+}
+
+.text-light {
+  color: $colorTextLight;
+}
+
+.text-special {
+  font-family: $fontSpecial;
 }

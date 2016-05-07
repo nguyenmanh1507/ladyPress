@@ -1,0 +1,32 @@
+.panel {
+  padding: calc($baseSize * 2) $baseSize;
+
+  background: $white;
+}
+
+.panel-heading {
+  display: flex;
+  margin-bottom: calc($baseSize * 2);
+}
+
+@b panel-title {
+  flex-grow: 1;
+  margin: 0;
+
+  font-family: $fontSpecial;
+  font-size: calc($baseSize * 2);
+  color: $colorPrimary;
+
+  @m small {
+    font-size: calc($baseSize * 1.5);
+  }
+}
+
+.panel-addon {
+  align-self: center;
+  float: right;
+
+  > a:first-of-type {
+    margin-right: $baseSize;
+  }
+}

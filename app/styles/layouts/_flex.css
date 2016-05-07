@@ -1,0 +1,23 @@
+@b l-flex {
+  display: flex;
+
+  > div:last-of-type {
+    margin-left: $baseSize;
+  }
+}
+
+.l-flex-alpha {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div:first-child {
+    flex-grow: 1;
+  }
+
+  > div:last-child {
+
+    > a:first-child {
+      margin-right: $baseSize;
+    }
+  }
+}

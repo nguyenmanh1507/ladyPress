@@ -1,0 +1,22 @@
+.media {
+  @extend clearPaddingAndMargin;
+}
+
+@b media {
+
+  @e item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: calc($baseSize * 2);
+    }
+  }
+
+  @e left-side {
+    min-width: calc($baseSize * 5);
+  }
+
+  @e right-side {
+    margin-left:  $baseSize;
+  }
+}

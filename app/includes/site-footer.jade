@@ -1,5 +1,5 @@
 footer.site-footer
-  section.padding
+  section.extra
     .container
       .row
         .col-md-4
@@ -8,38 +8,44 @@ footer.site-footer
               include site-name
             .panel-body
               p.text-light.text-small
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsam dicta, voluptates expedita impedit, totam quam, soluta maiores magnam reiciendis et molestias.
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsam dicta, voluptates expedita impedit, totam quam, soluta maiores magnam reiciendis et molestias.
               
-              h3.heading-small Follow us
+              h3.panel-title.panel-title--small Follow us
               include social-list
           
         .col-md-4
           .panel
             .panel-heading
-              h3.panel-title-small Popular Posts
+              h3.panel-title.panel-title--small Popular Posts
               .panel-addon
                 a(href="#"): i.fa.fa-chevron-left
                 a(href="#"): i.fa.fa-chevron-right
             .panel-body
-              .l-flex
-                .frame
-                  a.frame-link(href="#"): img(src="http://placehold.it/70x70", alt="")
-                div
-                  a.text-small(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos quasi consequuntur.
-                  div
-                    | Style by <a href="#">John Doe</a>
-              .l-flex
-                .frame
-                  a.frame-link(href="#"): img(src="http://placehold.it/70x70", alt="")
-                div
-                  a.text-small(href="#")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
-                  div
-                    | Style by <a href="#">John Doe</a>
+              ul.media
+                li.media__item
+                  .media__left-side
+                    .frame
+                      a.frame-link(href="#"): img(src="http://placehold.it/70x70", alt="")
+                      
+                  .media__right-side
+                    a.text-small.mb1(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    div.text-small
+                      | <span class="text-light">Style by</span> <a href="#">John Doe</a>
+                      
+                li.media__item
+                  .media__left-side
+                    .frame
+                      a.frame-link(href="#"): img(src="http://placehold.it/70x70", alt="")
+                      
+                  .media__right-side
+                    a.text-small.mb1(href="#")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus.
+                    div.text-small
+                      | <span class="text-light">Style by</span> <a href="#">John Doe</a>
         
         .col-md-4
           .panel
             .panel-heading
-              h3.panel-title-small Latest Posts
+              h3.panel-title.panel-title--small Latest Posts
               .panel-addon
                 a(href="#"): i.fa.fa-chevron-left
                 a(href="#"): i.fa.fa-chevron-right
@@ -49,6 +55,6 @@ footer.site-footer
               p.text-small
                 a(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus placeat, doloremque voluptatibus.
           
-  section.padding-small
-    span.text-link Copyright &copy; 2016 LadyPress. All rights reserved.
+  section.copyright
+    span.text-link.text-small Copyright &copy; 2016 LadyPress. All rights reserved.
       

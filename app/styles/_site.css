@@ -2,6 +2,11 @@
   padding: calc($baseSize * 4) 0 $baseSize;
 
   background: $white resolve('flower.png') repeat-x;
+
+  /* Float right social list in header */
+  .social-list {
+    float: right;
+  }
 }
 
 .site-name {
@@ -54,5 +59,18 @@
         color: $colorText;
       }
     }
+  }
+}
+
+.site-footer {
+
+  .extra {
+    background: $white;
+  }
+
+  .copyright {
+    padding: $baseSize 0;
+
+    text-align: center;
   }
 }

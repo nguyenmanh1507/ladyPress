@@ -1,0 +1,103 @@
+.frame {
+  position: relative;
+}
+
+.frame-link {
+  position: relative;
+
+  display: block;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    content: '';
+    size: calc(100% - 8px);
+
+    border: 1px solid $white;
+  }
+
+  img {
+    width: 100%;
+
+    vertical-align: bottom;
+  }
+}
+
+.frame-ribbon,
+.frame-text {
+  position: absolute;
+}
+
+.frame-ribbon {
+  top: -6px;
+  left: 50%;
+
+  size: 65px *;
+  padding: calc($baseSize * 0.31) 0;
+  margin-left: calc(-65px / 2);
+
+  text-align: center;
+  color: $white;
+
+  background: $colorPrimary;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+
+    triangle: right-iso pointing-up;
+    width: 12px;
+    background-color: color($colorPrimary blackness(40%));
+
+    z-index: -1;
+  }
+
+  &::before {
+    left: -6px;
+  }
+
+  &::after {
+    right: -6px;
+  }
+
+  time {
+    font-family: $fontSpecial;
+    font-size: calc($baseSize * 1.5);
+  }
+
+  /* Make class display block inside .frame-ribbon */
+  .text-small {
+    display: block;
+  }
+}
+
+.frame-text {
+  bottom: 0;
+  left: 0;
+
+  width: calc(100%);
+  padding: $baseSize;
+
+  font-size: calc($baseSize * 0.88);
+
+  background: linear-gradient(to top, $codGray, transparent);
+
+  a {
+    color: $white;
+  }
+}
+
+.frame--circle {
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  &::before {
+    border-radius: 50%;
+  }
+}
