@@ -1,0 +1,8 @@
+/* LIST INLINE */
+.list-inline {
+  @extend clearPaddingAndMargin;
+
+  li {
+    display: inline-block;
+  }
+}

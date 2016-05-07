@@ -1,0 +1,30 @@
+.input-group {
+  position: relative;
+}
+
+.form-control {
+  padding: calc($baseSize / 4) calc($baseSize * 2) calc($baseSize / 4) $baseSize;
+  max-width: 100%;
+
+  background: $colorInputBG;
+  border: 1px solid $colorInputBG;
+  border-radius: $radius;
+  box-shadow: inset 0 0 0 1px $white;
+}
+
+::-webkit-input-placeholder {
+  font-size: calc($baseSize * 0.75);
+  color: color($colorText a(80%));
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: color($colorText a(80%));
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: color($colorText a(80%));
+}
+
+:-ms-input-placeholder {
+  color: color($colorText a(80%));
+}

@@ -1,6 +1,6 @@
 header.site-header
   .container
-    .row
+    .row.mb2
       .col-md-4
         include site-name
         
@@ -8,7 +8,7 @@ header.site-header
         include social-list
     
     .row
-      .col-md-9
+      .col-md-10
         nav.site-nav(role="navigation")
           ul.nav
             li: a(href="#") Home
@@ -21,10 +21,10 @@ header.site-header
             li: a(href="#") Business
             li: a(href="#") Contact
             
-      .col-md-3
+      .col-md-2
         form(action="/", method="GET")
           .input-group
-            label(for="searchForm")
+            label.sr-only(for="searchForm") Search
             input.form-control#searchForm(type="search", placeholder="Search...")
             button.input-group-addon(type="submit"): i.fa.fa-search
             

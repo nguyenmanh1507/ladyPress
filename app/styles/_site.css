@@ -1,0 +1,58 @@
+.site-header {
+  padding: calc($baseSize * 4) 0 $baseSize;
+
+  background: $white resolve('flower.png') repeat-x;
+}
+
+.site-name {
+  margin: 0;
+
+  font-family: $fontSpecial;
+  font-size: calc($baseSize * 2);
+  text-transform: uppercase;
+
+  a {
+    color: $colorPrimary;
+  }
+}
+
+.site-nav {
+
+  .nav {
+    @extend clearPaddingAndMargin;
+
+    li {
+      position: relative;
+
+      display: inline-block;
+
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        padding-right: $baseSize;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: calc(50% - 2px);
+
+          display: inline-block;
+
+          size: 4px;
+
+          background: color($colorPrimary a(50%));
+          border-radius: 50%;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: calc($baseSize - 4px);
+      }
+
+      a {
+        color: $colorText;
+      }
+    }
+  }
+}

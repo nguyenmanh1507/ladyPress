@@ -1,0 +1,23 @@
+/* DIMENSION */
+$baseSize: 16px;
+$radius: $baseSize;
+
+/* COLORS */
+$white: #ffffff;
+$hopbush: #cc66a4;
+$pictonBlue: #55acee;
+$chambray: #3b5999;
+$chathamsBlue: #125688;
+$deepCerulean: #0077B5;
+$valencia: #DC4E41;
+$alizarinCrimson: #e52d27;
+$codGray: #1d1d1d;
+$vanillaIce: #ebbed7;
+
+$colorPrimary: $hopbush;
+$colorText: $codGray;
+$colorInputBG: $vanillaIce;
+
+/* FONTS */
+$fontPrimary: 'Montserrat', sans-serif;
+$fontSpecial: 'Rancho', cursive;

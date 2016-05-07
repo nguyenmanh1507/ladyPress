@@ -1,0 +1,12 @@
+.input-group-addon {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+
+  color: $white;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}

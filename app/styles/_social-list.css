@@ -1,0 +1,51 @@
+@b social-list {
+
+  > li {
+    size: calc($baseSize * 2);
+
+    font-size: calc($baseSize * 0.88);
+    text-align: center;
+    line-height: calc($baseSize * 1.8);
+
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px $white;
+
+    &:not(:last-child) {
+      margin-right: calc($baseSize / 2);
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  @m a {
+    background: $pictonBlue;
+    border: 1px solid $pictonBlue;
+  }
+
+  @m b {
+    background: $chambray;
+    border: 1px solid $chambray;
+  }
+
+  @m c {
+    background: $deepCerulean;
+    border: 1px solid $deepCerulean;
+  }
+
+  @m d {
+    background: $chathamsBlue;
+    border: 1px solid $chathamsBlue;
+  }
+
+  @m e {
+    background: $valencia;
+    border: 1px solid $valencia;
+  }
+
+  @m f {
+    background: $alizarinCrimson;
+    border: 1px solid $alizarinCrimson;
+  }
+}
