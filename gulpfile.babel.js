@@ -20,15 +20,24 @@ gulp.task('views', () => {
 
 gulp.task('styles', () => {
   const
-    bem = require('postcss-bem'),
-    precss = require('precss'),
+    assets       = require('postcss-assets'),
+    bem          = require('postcss-bem'),
+    precss       = require('precss'),
     fontMagician = require('postcss-font-magician'),
-    pxtorem = require('postcss-pxtorem'),
-    nested = require('postcss-nested'),
-    at2x = require('postcss-at2x'),
-    customMedia = require('postcss-custom-media'),
-    processors = [
+    pxtorem      = require('postcss-pxtorem'),
+    nested       = require('postcss-nested'),
+    at2x         = require('postcss-at2x'),
+    customMedia  = require('postcss-custom-media'),
+    shortSize    = require('postcss-short-size'),
+    processors   = [
       precss,
+      assets({
+        loadPaths: ['images/'],
+        basePath: 'app',
+        relative: true,
+        cachebuster: true
+      }),
+      shortSize,
       bem({
         style: 'bem',
         separators: {
