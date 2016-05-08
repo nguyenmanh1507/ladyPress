@@ -12,4 +12,14 @@ input.btn {
   border-radius: $radius;
   box-shadow: inset 0 0 0 1px $white;
   border: 1px solid $colorPrimary;
+
+  transition: all .3s ease-in;
+
+  &:focus,
+  &:hover {
+    color: $white;
+
+    background: color($colorPrimary blackness(40%));
+    border-color: color($colorPrimary blackness(40%));
+  }
 }

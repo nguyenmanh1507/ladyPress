@@ -16,7 +16,7 @@ blockquote {
   }
 }
 
-/* LIST INLINE */
+/* LISTS */
 .list-inline {
   @extend clearPaddingAndMargin;
 
@@ -25,13 +25,32 @@ blockquote {
   }
 }
 
+.list-unstyle {
+  list-style: none;
+  @extend clearPaddingAndMargin;
+}
+
 /* PARAGRAPHS */
 .text-link {
   color: $colorPrimary;
 }
 
+/* Make link color like text color */
+.text-p-color {
+  color: $black;
+
+  &:focus,
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
 .text-small {
   font-size: calc($baseSize * 0.75);
+}
+
+.text-tiny {
+  font-size: calc($baseSize * 0.69);
 }
 
 .text-light {

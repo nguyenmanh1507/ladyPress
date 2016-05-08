@@ -23,8 +23,21 @@ body {
 a {
   color: $colorPrimary;
   text-decoration: none;
+
+  transition: color .3s ease-in;
+
+  &:focus,
+  &:hover {
+    color: color($colorPrimary blackness(40%));
+  }
 }
 
 img {
   max-width: 100%;
+}
+
+ul {
+  li:not(:last-child) {
+    margin-bottom: $baseSize;
+  }
 }
