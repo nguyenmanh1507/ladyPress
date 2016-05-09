@@ -7,6 +7,8 @@
 
   display: block;
 
+  transition: opacity .3s ease-in;
+
   &::before {
     position: absolute;
     top: 50%;
@@ -17,6 +19,11 @@
     size: calc(100% - 8px);
 
     border: 1px solid $white;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: .8;
   }
 
   img {

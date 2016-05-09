@@ -37,7 +37,7 @@ blockquote {
 
 /* Make link color like text color */
 .text-p-color {
-  color: $black;
+  color: $codGray;
 
   &:focus,
   &:hover {

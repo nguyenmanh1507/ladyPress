@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  color: $codGray;
   font-family: $fontPrimary;
 
   background: $white resolve('greyfloral.png') at-2x;
