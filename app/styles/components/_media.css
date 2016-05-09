@@ -4,6 +4,10 @@
 
 @b media {
 
+  li {
+    list-style: none;
+  }
+
   @e item {
     display: flex;
 

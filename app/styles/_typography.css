@@ -5,14 +5,35 @@ blockquote {
   margin: 0;
   padding: calc($baseSize / 2) 0 0 $baseSize;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
-    top: 0;
-    left: 0;
 
     content: '\"';
+    color: $colorPrimary;
     font-family: $fontSpecial;
     font-size: calc($baseSize * 2);
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    line-height: 0
+  }
+
+  cite {
+    color: $boulder;
+
+    &::before {
+      content: '\2013';
+      margin-right: calc($baseSize / 2);
+      color: $colorPrimary;
+    }
   }
 }
 
@@ -43,6 +64,10 @@ blockquote {
   &:hover {
     color: $colorPrimary;
   }
+}
+
+.text-large {
+  font-size: calc($baseSize * 1.5);
 }
 
 .text-small {

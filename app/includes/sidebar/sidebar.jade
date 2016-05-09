@@ -1,0 +1,122 @@
+aside
+  .panel.mb2
+    .panel-heading
+      .panel-title Category
+    .panel-body
+      ul.list-unstyle
+        li.l-flex-alpha
+          a.text-p-color(href="#") Family
+          a.text-p-color (13)
+        li.l-flex-alpha
+          a.text-p-color(href="#") Style
+          a.text-p-color(href="#") (21)
+        li.l-flex-alpha
+          a.text-p-color(href="#") Food
+          a.text-p-color(href="#") (23)
+        li.l-flex-alpha
+          a.text-p-color(href="#") Recipes
+          a.text-p-color(href="#") (46)
+        li.l-flex-alpha
+          a.text-p-color(href="#") Health
+          a.text-p-color(href="#") (41)
+        li.l-flex-alpha
+          a.text-p-color(href="#") Sports
+          a.text-p-color(href="#") (38)
+        li.l-flex-alpha
+          a.text-p-color(href="#") Business
+          a.text-p-color(href="#") (63)
+
+  .panel.mb2
+    .panel-heading 
+      h2.panel-title Subcribe
+    .panel-body
+      form(action="/", method="POST")
+        .input-group
+          label.sr-only(for="subcribe") Subcribe for newsletter
+          input.form-control#subcribe(type="email", placeholder="Email...")
+          button.input-group-addon.btn.input-group-addon-btn(type="submit") Subcribe
+
+  .panel.mb2
+    .panel-heading
+      h2.panel-title Popular Posts
+    .panel-body
+      include popular-post
+
+  .panel.mb2
+    .panel-heading
+      h2.panel-title Latest Comments
+    .panel-body
+      include latest-comment
+      
+  .panel.mb2
+    .panel-heading
+      h2.panel-title Featured Slider
+      .panel-addon
+        a(href="#"): i.fa.fa-chevron-left
+        a(href="#"): i.fa.fa-chevron-right
+    .panel-body
+      .frame.mb1
+        a.frame-link(href="#"): img(src="http://placehold.it/310x200", alt="")
+        .frame-ribbon
+          time.datetime(datetime="07-15-1991")
+            | 15<sup>th</sup> <span class="text-small">December</span>
+            
+      p: a.text-p-color(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, corporis necessitatibus!
+      
+      p.text-light.text-small.mb2
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim, quisquam molestias ipsa inventore aliquam mollitia laudantium eius maiores itaque, doloremque doloribus natus.
+        
+  .panel
+    .panel-heading
+      h2.panel-title Tags
+    .panel-body
+      ul.list-inline
+        each val in ['Family', 'Style', 'Food', 'Health', 'Recipes', 'Sports', 'Life style', 'Business', 'Fashion', 'Children', 'Travel', 'Home Design']
+          li
+            a.btn-tag(href="#")= val
+    
+  .panel.mb2
+    .panel-heading
+      h2.panel-title Text Widget
+    .panel-body
+      p.text-small.text-light
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi sint animi quia est fugiat numquam obcaecati nemo, laborum, laboriosam, repellat eligendi. Accusantium recusandae distinctio sint, quod saepe corporis asperiores ratione, explicabo ipsum labore tempora, nostrum eveniet expedita, quia ipsa!
+        
+  .panel.mb4
+    .panel-heading
+      h2.panel-title Video Slider
+      .panel-addon
+        a(href="#"): i.fa.fa-chevron-left
+        a(href="#"): i.fa.fa-chevron-right
+    .panel-body
+      .mb3
+        .frame.mb1
+          a.frame-link(href="#"): img(src="http://placehold.it/310x200", alt="")
+          .frame-ribbon
+            time.datetime(datetime="07-15-1991")
+              | 15<sup>th</sup> <span class="text-small">December</span>
+              
+        p: a.text-p-color(href="#") Lorem ipsum dolor sit.
+        
+        p.text-light.text-small.mb1
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim...
+        
+        .l-flex-alpha
+          .text-tiny
+            a(href="#") Bussiness 
+            span.text-light  by 
+            a(href="#") Tomy intur
+          time.text-tiny.text-link(datetime="") 11<sup>th</sup>February
+          
+      .mb3
+        p: a.text-p-color(href="#") Lorem ipsum dolor sit.
+        
+        p.text-light.text-small.mb1
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim...
+        
+        .l-flex-alpha
+          .text-tiny
+            a(href="#") Bussiness 
+            span.text-light  by 
+            a(href="#") Tomy intur
+          time.text-tiny.text-link(datetime="") 11<sup>th</sup>February

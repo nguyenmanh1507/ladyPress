@@ -2,6 +2,7 @@
   position: absolute;
   top: 3px;
   right: 5px;
+  bottom: 3px;
 
   color: $white;
 
@@ -9,4 +10,13 @@
   background: transparent;
 
   cursor: pointer;
+}
+
+.input-group-addon-btn {
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  background: $colorPrimary;
+  border: 1px solid $colorPrimary;
 }

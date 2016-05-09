@@ -1,0 +1,214 @@
+extend layouts/default
+
+block content
+  .container
+    .row
+      .col-md-8
+        .panel.mb2
+          .panel-heading
+            h2.panel-title Our Blog
+          .panel-body
+            ol.site-breadcrumb.mb4
+              li: a(href="#") Home
+              li: a(href="#") Blog
+              li.active Lorem ipsum dolor sit.
+            
+            article
+              .frame.mb1
+                div.frame-link: img(src="http://placehold.it/710x480", alt="#")
+                .frame-ribbon
+                  time.datetime(datetime="07-15-1991")
+                    | 15<sup>th</sup> <span class="text-small">July</span>
+
+              .l-flex-alpha
+                .text-small
+                  a(href="#") Fashion 
+                  span.text-light by 
+                  a(href="#") Aleks Tomson
+                .text-small
+                  a(href="#").mr1
+                    i.fa.fa-comment-o
+                    span.text-light  29
+                    
+                  a(href="#")
+                    i.fa.fa-heart-o
+                    span.text-light  47
+              
+              h1.text-p-color.text-large Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              
+              div.post.mb2
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim, quisquam molestias ipsa inventore aliquam mollitia laudantium eius maiores itaque, doloremque doloribus natus.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quod, harum consequuntur, enim numquam praesentium, sint fugit vel autem illum facere, architecto aspernatur officia ullam. Fuga cupiditate iure quam tenetur provident commodi fugit, esse voluptatibus excepturi amet molestias ullam itaque.
+                figure
+                  img(src="http://placehold.it/710x480", alt="#")
+                  figcaption
+                    p Lorem ipsum dolor sit.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi natus, recusandae nemo adipisci perspiciatis nostrum qui assumenda mollitia voluptatibus. Sint in illo repellat nesciunt repellendus fuga quasi esse ipsam, animi dolores ullam non magnam sapiente rerum voluptates culpa facilis iusto.
+                blockquote
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, expedita, aut. Temporibus, sit, animi.
+                  cite Ricardo Kaka
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit, ad facilis.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ut placeat et sequi dolorem molestias, dignissimos eligendi iste quia asperiores delectus. Voluptatibus magnam vel quidem tempore sequi officiis dolore quaerat aut ipsum totam consequuntur, quos fugiat ducimus nulla illo nesciunt voluptates nobis qui inventore cupiditate molestiae possimus quo, natus? Reprehenderit ipsum, hic velit dignissimos earum, quaerat.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nam eum ex, doloribus cupiditate commodi voluptatem voluptatum accusamus placeat nemo, quibusdam velit magnam dolorem ipsum explicabo ducimus amet! Ipsum laborum, consequatur harum! Id voluptatem similique impedit qui nobis. Sunt est pariatur dicta et optio maiores soluta aliquam veniam!                
+              
+              .mb4
+                .l-flex-alpha
+                  ul.list-inline
+                    li: a.btn-tag(href="#") Fashion
+                    li: a.btn-tag(href="#") Life style
+                    li: a.btn-tag(href="#") Food
+                    
+                  ul.list-inline.social-list.social-list--gray
+                    li
+                      span Share
+                    li
+                      a(href="#", target="_blank"): i.fa.fa-twitter
+                    li
+                      a(href="#", target="_blank"): i.fa.fa-facebook
+                    li
+                      a(href="#", target="_blank"): i.fa.fa-google-plus
+                    
+              .l-flex-alpha
+                div
+                  a.btn(href="#") Prev post
+                div
+                  a.btn(href="#") Next post
+            
+        .panel.mb2
+          .panel-heading
+            h2.panel-title Related Post
+            .panel-addon
+              a(href="#"): i.fa.fa-chevron-left
+              a(href="#"): i.fa.fa-chevron-right
+              
+          .panel-body
+            .row
+            .row
+              - var i = 1
+              while i < 4
+                .col-md-4.col-sm-6.mb2
+                  .frame
+                    a.frame-link(href="#"): img(src="http://placehold.it/255x175", alt="#{i++}")
+                  
+                  p: a.text-p-color(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  
+                  p.text-light.text-small.mb1
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim, quisquam...
+                    
+                  a.btn(href="#") Learn more
+                  
+        .panel.mb2
+          .panel-heading
+            h2.panel-title Comments
+          .panel-body
+            ul.media
+              li
+                .media__item
+                  .media__left-side
+                    .frame
+                      a.frame-link.frame--circle(href="#"): img(src="http://placehold.it/70x70", alt="#{i++}")
+                      
+                  .media__right-side
+                    .mb1
+                      time.text-small.text-light.text-special(datetime="")
+                        | 15:30 - 19<sup>th</sup> January
+                    p.mb1
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae perspiciatis repellat voluptatum?
+                      
+                    .l-flex-alpha.text-small
+                      div
+                        | <span class="text-light">By</span> <a href="#">John Doe</a>
+                      a(href="#")
+                        i.fa.fa-reply
+                        |  Reply
+                      
+                ul
+                  li
+                    .media__item
+                      .media__left-side
+                        .frame
+                          a.frame-link.frame--circle(href="#"): img(src="http://placehold.it/70x70", alt="#{i++}")
+                          
+                      .media__right-side
+                        .mb1
+                          time.text-small.text-light.text-special(datetime="")
+                            | 15:30 - 19<sup>th</sup> January
+                        p.mb1
+                          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae perspiciatis repellat voluptatum?
+                          
+                        .l-flex-alpha.text-small
+                          div
+                            | <span class="text-light">By</span> <a href="#">John Doe</a>
+                          a(href="#")
+                            i.fa.fa-reply
+                            |  Reply
+                  li
+                    .media__item
+                      .media__left-side
+                        .frame
+                          a.frame-link.frame--circle(href="#"): img(src="http://placehold.it/70x70", alt="#{i++}")
+                          
+                      .media__right-side
+                        .mb1
+                          time.text-small.text-light.text-special(datetime="")
+                            | 15:30 - 19<sup>th</sup> January
+                        p.mb1
+                          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae perspiciatis repellat voluptatum?
+                          
+                        .l-flex-alpha.text-small
+                          div
+                            | <span class="text-light">By</span> <a href="#">John Doe</a>
+                          a(href="#")
+                            i.fa.fa-reply
+                            |  Reply
+                            
+              li
+                .media__item
+                  .media__left-side
+                    .frame
+                      a.frame-link.frame--circle(href="#"): img(src="http://placehold.it/70x70", alt="#{i++}")
+                      
+                  .media__right-side
+                    .mb1
+                      time.text-small.text-light.text-special(datetime="")
+                        | 15:30 - 19<sup>th</sup> January
+                    p.mb1
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae perspiciatis repellat voluptatum?
+                      
+                    .l-flex-alpha.text-small
+                      div
+                        | <span class="text-light">By</span> <a href="#">John Doe</a>
+                      a(href="#")
+                        i.fa.fa-reply
+                        |  Reply              
+    
+        .panel.mb4
+          .panel-heading
+            h2.panel-title Leave Your Comments
+          .panel-body
+            form(action="/")
+              .mb4
+                span.text-link: i.fa.fa-asterisk
+                |  - required fields.
+              .row
+                .col-md-6
+                  .mb1
+                    label.sr-only(for="commentName") Name
+                    input.form-control#commentName(type="search", placeholder="Name *")
+                .col-md-6
+                  .mb1
+                    label.sr-only(for="commentEmail") Email
+                    input.form-control#commentEmail(type="search", placeholder="Email *")
+                .col-md-12
+                  .mb2
+                    textarea.form-control(placeholder="Your message *", rows="6")
+              button.btn(type="submit") Submit
+          
+      .col-md-4
+        include includes/sidebar/sidebar

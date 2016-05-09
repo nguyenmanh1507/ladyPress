@@ -1,0 +1,21 @@
+ul.media
+  - var i = 1
+  while i < 4
+    li.media__item
+      .media__left-side
+        .frame
+          a.frame-link.frame--circle(href="#"): img(src="http://placehold.it/70x70", alt="#{i++}")
+          
+      .media__right-side
+        .mb1
+          time.text-small.text-light.text-special(datetime="")
+            | 15:30 - 19<sup>th</sup> January
+        blockquote.text-small.mb1
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae perspiciatis repellat voluptatum?
+          
+        .l-flex-alpha.text-small
+          div
+            | <span class="text-light">By</span> <a href="#">John Doe</a>
+          a(href="#")
+            i.fa.fa-reply
+            |  Reply

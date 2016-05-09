@@ -9,7 +9,7 @@ section.mb5
             .row
               .col-md-9
                 .frame.mb1
-                  a.frame-link(href="#"): img(src="http://lorempixel.com/540/334/sports", alt="")
+                  a.frame-link(href="#"): img(src="http://placehold.it/540x334", alt="")
                   .frame-ribbon
                     time.datetime(datetime="07-15-1991")
                       | 15<sup>th</sup> <span class="text-small">December</span>
@@ -36,7 +36,7 @@ section.mb5
                   
               .col-md-3
                 .frame.mb1
-                  a.frame-link(href="#"): img(src="http://lorempixel.com/140/127/nature", alt="")
+                  a.frame-link(href="#"): img(src="http://placehold.it/140x127", alt="")
                   .frame-ribbon
                     time.datetime(datetime="07-15-1991")
                       | 4<sup>th</sup> <span class="text-small">September</span>
@@ -49,7 +49,7 @@ section.mb5
                 a.text-small.text-p-color.mb2(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing.
                 
                 .frame.mb1
-                  a.frame-link(href="#"): img(src="http://lorempixel.com/140/127/transport", alt="")
+                  a.frame-link(href="#"): img(src="http://placehold.it/140x127", alt="")
                   .frame-ribbon
                     time.datetime(datetime="07-15-1991")
                       | 5<sup>th</sup> <span class="text-small">September</span>
@@ -66,26 +66,5 @@ section.mb5
           .panel-heading
             h3.panel-title Latest Comments
           .panel-body
-            ul.media
-              - var i = 1
-              while i < 4
-                li.media__item
-                  .media__left-side
-                    .frame
-                      a.frame-link.frame--circle(href="#"): img(src="http://lorempixel.com/70/70/people", alt="#{i++}")
-                      
-                  .media__right-side
-                    .mb1
-                      time.text-small.text-light.text-special(datetime="")
-                        | 15:30 - 19<sup>th</sup> January
-                    blockquote.text-small.mb1
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae perspiciatis repellat voluptatum?
-                      
-                    .l-flex-alpha.text-small
-                      div
-                        | <span class="text-light">By</span> <a href="#">John Doe</a>
-                      a(href="#")
-                        i.fa.fa-reply
-                        |  Reply
-            
+            include ../sidebar/latest-comment
       

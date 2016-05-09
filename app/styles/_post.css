@@ -1,0 +1,34 @@
+.post {
+
+  blockquote {
+    padding: $baseSize;
+
+    font-size: calc($baseSize * 1.5);
+
+    &::before,
+    &::after {
+      position: static;
+    }
+
+    &::before {
+      margin-right: calc($baseSize / 2);
+    }
+
+    &::after {
+      margin-left: calc($baseSize / 2);
+    }
+
+    cite {
+      font-size: $baseSize;
+    }
+  }
+
+  figure {
+    margin: $baseSize 0;
+
+    figcaption {
+      color: $boulder;
+      font-style: italic;
+    }
+  }
+}

@@ -1,8 +1,4 @@
-input.btn {
-  border: none;
-}
-
-.btn {
+@define-mixin buttonPrimary {
   padding: calc($baseSize / 4) $baseSize;
   font-size: $baseSize;
   font-family: $fontSpecial;
@@ -21,25 +17,5 @@ input.btn {
 
     background: color($colorPrimary blackness(40%));
     border-color: color($colorPrimary blackness(40%));
-  }
-}
-
-button.btn {
-  cursor: pointer;
-}
-
-.btn-tag {
-  padding: calc($baseSize * 0.31) $baseSize;
-
-  color: $boulder;
-
-  background: color($boulder a(20%));
-
-  transition: all .3s ease-in;
-
-  &:hover {
-    color: $white;
-
-    background: $colorPrimary;
   }
 }

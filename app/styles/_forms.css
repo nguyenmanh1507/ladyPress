@@ -3,8 +3,11 @@
 }
 
 .form-control {
-  padding: calc($baseSize / 4) calc($baseSize * 2) calc($baseSize / 4) $baseSize;
+  padding: calc($baseSize / 3) calc($baseSize * 2) calc($baseSize / 3) $baseSize;
   max-width: 100%;
+  width: 100%;
+
+  color: $white;
 
   background: $colorInputBG;
   border: 1px solid $colorInputBG;
@@ -13,18 +16,17 @@
 }
 
 ::-webkit-input-placeholder {
-  font-size: calc($baseSize * 0.75);
-  color: color($colorText a(80%));
+  color: $white;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  color: color($colorText a(80%));
+  color: $white;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  color: color($colorText a(80%));
+  color: $white;
 }
 
 :-ms-input-placeholder {
-  color: color($colorText a(80%));
+  color: $white;
 }
