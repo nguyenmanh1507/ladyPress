@@ -32,12 +32,12 @@
 }
 
 .frame-ribbon {
-  top: -6px;
+  top: -5px;
   left: 50%;
 
   size: 65px *;
-  padding: calc($baseSize * 0.31) 0;
   margin-left: calc(-65px / 2);
+  padding: calc($baseSize * 0.31);
 
   text-align: center;
   color: $white;
@@ -48,21 +48,21 @@
   &::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 2px;
 
     triangle: right-iso pointing-up;
-    width: 12px;
+    width: 6px;
     background-color: color($colorPrimary blackness(40%));
-
-    z-index: -1;
   }
 
   &::before {
-    left: -6px;
+    left: -4px;
+    transform: rotateZ(135deg);
   }
 
   &::after {
-    right: -6px;
+    right: -4px;
+    transform: rotateZ(-135deg);
   }
 
   time {

@@ -13,11 +13,4 @@
   > div:first-child {
     flex-grow: 1;
   }
-
-  > div:last-child {
-
-    > a:first-child {
-      margin-right: $baseSize;
-    }
-  }
 }

@@ -4,6 +4,11 @@
     display: block;
     margin-bottom: calc($baseSize * $i);
   }
+
+  .mr$i {
+    display: inline-block;
+    margin-right: calc($baseSize * $i);
+  }
 }
 
 /* SCREEN READER */
