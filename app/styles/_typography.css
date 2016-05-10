@@ -85,3 +85,59 @@ blockquote {
 .text-special {
   font-family: $fontSpecial;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 3px color($black a(50%));
+}
+
+.page-blockquote {
+  padding: 0 calc($baseSize * 2);
+
+  &::before,
+  &::after {
+    content: '';
+  }
+
+  p {
+    position: relative;
+
+    padding: calc($baseSize * 2);
+
+    font-size: calc($baseSize * 1.5);
+    font-style: italic;
+    color: $boulder;
+
+    &::before,
+    &::after {
+      content: '\"';
+      position: absolute;
+
+      color: $colorPrimary;
+      font-family: $fontSpecial;
+      font-size: calc($baseSize * 5);
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      line-height: 0;
+    }
+  }
+
+  cite {
+    float: right;
+
+    font-size: calc($baseSize * 3);
+    color: $colorPrimary;
+    font-family: $fontSpecial;
+  }
+}

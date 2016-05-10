@@ -32,5 +32,6 @@ body {
 @import "components/panel";
 @import "components/media";
 @import "components/frame";
+@import "components/map-canvas";
 
 @import "helpers";

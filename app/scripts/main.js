@@ -1,1 +1,9 @@
-console.log('\'Allo \'Allo!');
+(function() {
+
+  const showName = (name) => {
+    console.log(name);
+  };
+
+  showName('Manh');
+
+})();

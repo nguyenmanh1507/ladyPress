@@ -1,0 +1,89 @@
+extend layouts/default
+
+block content
+  //- Only insert googleMap script on contact page
+  - var googleMap = true
+  
+  .container
+    .row
+      .col-md-12
+        .panel.mb2
+          .panel-heading
+            h1.panel-title Our contact
+          .panle-body
+            .row.mb2
+              .col-md-7
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora reiciendis sint consequatur ipsam vitae, totam commodi aliquid quod atque iusto, sunt quam.
+                
+                blockquote.page-blockquote
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore hic ab pariatur.
+                  cite Alisa Spiturys
+                  
+              .col-md-5
+                img(src="http://placehold.it/440x340", alt="")
+                
+            .row
+              .col-md-6
+                p.text-special.text-large.text-link For media &amp; events in Canada, please contact
+                
+                ul.media
+                  li.media__item
+                    .media__left-side.text-center.text-link.text-shadow
+                      i.fa.fa-map-marker.fa-4x
+                                            
+                    .media__right-side
+                      ul.list-unstyle
+                        li Address: West 34th Street Scarborough, Toronto, ON, Canada
+                        li
+                          | Tel: <a href="tel:1234567890" class="text-p-color">123-456-7890</a>
+                        li
+                          | Email: <a href="mailto:example@gmail.com" class="text-p-color">Alisa_Ftuilryr@gmail.com</a>
+                        li
+                          | Web: <a href="alisaftuilryrladdypress.com" class="text-p-color" target="_blank">AlisaFtuilryrLaddyPress.com</a>
+                      
+              .col-md-6
+                p.text-special.text-large.text-link For media &amp; events in United States, please contact
+                
+                ul.media
+                  li.media__item
+                    .media__left-side.text-center.text-link.text-shadow
+                      i.fa.fa-map-marker.fa-4x
+                                            
+                    .media__right-side
+                      ul.list-unstyle
+                        li Address: 34th Street Diner, West 34th Street, New York, NY, USA
+                        li
+                          | Tel: <a href="tel:1234567890" class="text-p-color">123-456-7890</a>
+                        li
+                          | Email: <a href="mailto:example@gmail.com" class="text-p-color">Sofia_Petison@gmail.com</a>
+                        li
+                          | Web: <a href="sofiapetisonleddypress.com" class="text-p-color" target="_blank">SofiaPetisonLeddyPress.com</a>
+    
+    .row
+      .col-md-8
+        .panel.mb2
+          .panel-heading
+            h2.panel-title Contact Form
+          .panel-body
+            form(action="/")
+              .mb2
+                span.text-link: i.fa.fa-asterisk
+                |  - required fields.
+              .row
+                .col-md-6
+                  .mb1
+                    label.sr-only(for="commentName") Name
+                    input.form-control#commentName(type="search", placeholder="Name *")
+                .col-md-6
+                  .mb1
+                    label.sr-only(for="commentEmail") Email
+                    input.form-control#commentEmail(type="search", placeholder="Email *")
+                .col-md-12
+                  .mb2
+                    textarea.form-control(placeholder="Your message *", rows="6")
+              button.btn(type="submit") Submit
+      .col-md-4
+        #mapCanvas.mb5
+      
