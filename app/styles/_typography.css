@@ -131,6 +131,11 @@ blockquote {
       bottom: 0;
       line-height: 0;
     }
+
+    @media (--small) {
+      margin-bottom: 0;
+      font-size: calc($baseSize * 1.2);
+    }
   }
 
   cite {
@@ -139,5 +144,9 @@ blockquote {
     font-size: calc($baseSize * 3);
     color: $colorPrimary;
     font-family: $fontSpecial;
+
+    @media (--small) {
+      font-size: calc($baseSize * 1.5);
+    }
   }
 }

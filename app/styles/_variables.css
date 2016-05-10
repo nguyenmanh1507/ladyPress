@@ -27,3 +27,17 @@ $colorInputBG: $vanillaIce;
 $fontPrimary: 'Raleway', sans-serif;
 /* $fontSpecial: 'Rancho', cursive; */
 $fontSpecial: 'Redressed', cursive;
+
+/* MEDIA QUERY */
+
+/* Large devices (Desktop: <= 1200px) */
+@custom-media --large (max-width: 1200px);
+
+/* Medium devices (Desktop: <= 1200px) */
+@custom-media --medium (max-width: 992px);
+
+/* Small devices (Tablet: <= 768px) */
+@custom-media --small (max-width: 768px);
+
+/* Custom hero section breakpoint (615px) */
+@custom-media --hero-br (max-width: 615px);

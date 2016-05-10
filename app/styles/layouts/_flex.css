@@ -4,6 +4,23 @@
   > div:last-of-type {
     margin-left: $baseSize;
   }
+
+  @media (--medium) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (--hero-br) {
+    .stick-bottom {
+      position: relative;
+
+      width: auto;
+    }
+
+    > div:last-of-type {
+      margin-left: 0;
+    }
+  }
 }
 
 .l-flex-alpha {

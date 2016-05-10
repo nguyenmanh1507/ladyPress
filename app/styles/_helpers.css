@@ -9,6 +9,11 @@
     display: inline-block;
     margin-right: calc($baseSize * $i);
   }
+
+  .mt$i {
+    display: inline-block;
+    margin-top: calc($baseSize * $i);
+  }
 }
 
 /* SCREEN READER */
