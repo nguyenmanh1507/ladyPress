@@ -24,5 +24,6 @@ $colorTextLight: $boulder;
 $colorInputBG: $vanillaIce;
 
 /* FONTS */
-$fontPrimary: 'Lato', sans-serif;
-$fontSpecial: 'Rancho', cursive;
+$fontPrimary: 'Raleway', sans-serif;
+/* $fontSpecial: 'Rancho', cursive; */
+$fontSpecial: 'Redressed', cursive;
