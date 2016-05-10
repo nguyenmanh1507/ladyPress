@@ -1,4 +1,5 @@
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_HOST} !www.cronweekly.com$ [NC]
-RewriteRule ^(.*)$ http://www.cronweekly.com/$1 [L,R=301] 
+<IfModule mod_headers.c>
+    <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf|css)$">
+        Header set Cache-Control "max-age=1209600, public"
+    </filesMatch>
+</IfModule>
