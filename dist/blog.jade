@@ -1,0 +1,95 @@
+extends layouts/default
+
+block content
+  .container
+    .row
+      .col-md-8
+        .panel.mb5
+          .panel-heading
+            h2.panel-title Our blog
+          .panel-body
+            ol.site-breadcrumb.mb4
+              li: a(href="#") Home
+              li.active Blog
+            
+            - var i = 1
+            while i < 5
+              article.mb4
+                .frame.mb1
+                  a.frame-link(href="blog-detail.html"): img(src="http://placehold.it/710x480", alt="#{i++}")
+                  .frame-ribbon
+                    time.datetime(datetime="07-15-1991")
+                      | 15<sup>th</sup> <span class="text-small">July</span>
+
+                .l-flex-alpha
+                  .text-small
+                    a(href="#") Fashion 
+                    span.text-light by 
+                    a(href="#") Aleks Tomson
+                  .text-small
+                    a(href="#").mr1
+                      i.fa.fa-comment-o
+                      span.text-light  29
+                      
+                    a(href="#")
+                      i.fa.fa-heart-o
+                      span.text-light  47
+                
+                p: a.text-p-color(href="blog-detail.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                
+                p.text-light.text-small.mb2
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim, quisquam molestias ipsa inventore aliquam mollitia laudantium eius maiores itaque, doloremque doloribus natus.
+                
+                .l-flex-alpha
+                  div
+                    a.btn(href="blog-detail.html") Learn more
+                  
+                  ul.list-inline.social-list.social-list--gray
+                    li
+                      span Share
+                    li
+                      a(href="#", target="_blank"): i.fa.fa-twitter
+                    li
+                      a(href="#", target="_blank"): i.fa.fa-facebook
+                    li
+                      a(href="#", target="_blank"): i.fa.fa-google-plus
+            
+            include includes/site-pagination
+              
+      .col-md-4
+        include includes/sidebar/sidebar
+      
+    .row
+      .col-xs-12
+        .panel.mb4
+          .panel-heading
+            h2.panel-title Related Posts
+          .panel-body
+            .row
+              - var i = 1
+              while i < 5
+                .col-md-3.col-sm-6.mb2
+                  .frame
+                    a.frame-link(href="#"): img(src="http://placehold.it/255x175", alt="#{i++}")
+                  
+                  p: a.text-p-color(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  
+                  p.text-light.text-small.mb1
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim, quisquam...
+                    
+                  .l-flex-alpha
+                    .text-small
+                      a(href="#") Family
+                      span.text-light  by 
+                      a(href="#") Aleks Tomson
+                    .text-small.mb2
+                      a(href="#").mr1
+                        i.fa.fa-comment-o
+                        span.text-light  29
+                        
+                      a(href="#")
+                        i.fa.fa-heart-o
+                        span.text-light  47
+                    
+                  a.btn(href="#") Learn more
+            

@@ -1,0 +1,1 @@
+"use strict";!function(){var n=function(n){console.log(n)};n("Manh")}();
