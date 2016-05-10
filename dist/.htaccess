@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} !www.cronweekly.com$ [NC]
+RewriteRule ^(.*)$ http://www.cronweekly.com/$1 [L,R=301] 
