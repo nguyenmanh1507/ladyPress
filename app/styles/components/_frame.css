@@ -39,48 +39,7 @@
 }
 
 .frame-ribbon {
-  top: -5px;
-  left: 50%;
-
-  size: 65px *;
-  margin-left: calc(-65px / 2);
-  padding: calc($baseSize * 0.31);
-
-  text-align: center;
-  color: $white;
-
-  background: $colorPrimary;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-
-    triangle: right-iso pointing-up;
-    width: 6px;
-    background-color: color($colorPrimary blackness(40%));
-  }
-
-  &::before {
-    left: -4px;
-    transform: rotateZ(135deg);
-  }
-
-  &::after {
-    right: -4px;
-    transform: rotateZ(-135deg);
-  }
-
-  time {
-    font-family: $fontSpecial;
-    font-size: calc($baseSize * 1.5);
-  }
-
-  /* Make class display block inside .frame-ribbon */
-  .text-small {
-    display: block;
-  }
+  @mixin ribbon;
 }
 
 .frame-text {

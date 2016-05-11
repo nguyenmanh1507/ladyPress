@@ -11,12 +11,6 @@
   }
 
   @media (--hero-br) {
-    .stick-bottom {
-      position: relative;
-
-      width: auto;
-    }
-
     > div:last-of-type {
       margin-left: 0;
     }

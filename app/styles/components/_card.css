@@ -1,0 +1,52 @@
+@b card {
+  position: relative;
+
+  @e thumbnail {
+    width: calc(100% - 300px);
+
+    @media (--medium) {
+      width: 100%;
+    }
+  }
+
+  @e wrap-content {
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    width: 415px;
+
+    background: $alabaster;
+
+    transform: translateY(-50%);
+
+    @media (--medium) {
+      position: relative;
+
+      width: 95%;
+      margin: -$baseSize auto 0;
+
+      transform: none;
+    }
+  }
+
+  @e content {
+    position: relative;
+
+    padding: calc($baseSize * 5) calc($baseSize * 3) calc($baseSize * 3);
+
+    @media (--medium) {
+      padding: calc($baseSize * 5) $baseSize $baseSize;
+    }
+  }
+
+  @e ribbon {
+    position: absolute;
+    @mixin ribbon;
+  }
+
+  /* prevent text in .card__content blur */
+  .frame-link{
+    transition: none;
+  }
+}

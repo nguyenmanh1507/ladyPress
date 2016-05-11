@@ -1,0 +1,39 @@
+extend layouts/default
+
+block content
+  .container
+    .row
+    
+    .row
+      .col-xs-12
+        .panel.mb5
+          .panel-heading
+            h2.panel-title Related Posts
+          .panel-body
+            .row
+              - var i = 1
+              while i < 5
+                .col-md-3.col-sm-6.mb2
+                  .frame
+                    a.frame-link(href="#"): img(src="http://placehold.it/255x175", alt="#{i++}")
+                  
+                  p: a.text-p-color(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  
+                  p.text-light.text-small.mb1
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit velit pariatur atque asperiores similique quidem enim, quisquam...
+                    
+                  .l-flex-alpha
+                    .text-small
+                      a(href="#") Family
+                      span.text-light  by 
+                      a(href="#") Aleks Tomson
+                    .text-small.mb2
+                      a(href="#").mr1
+                        i.fa.fa-comment-o
+                        span.text-light  29
+                        
+                      a(href="#")
+                        i.fa.fa-heart-o
+                        span.text-light  47
+                    
+                  a.btn(href="#") Learn more
