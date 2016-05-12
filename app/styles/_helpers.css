@@ -11,7 +11,7 @@
   }
 
   .mt$i {
-    display: inline-block;
+    display: block;
     margin-top: calc($baseSize * $i);
   }
 }
