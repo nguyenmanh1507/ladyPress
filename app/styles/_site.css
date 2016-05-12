@@ -52,8 +52,34 @@
 
 .site-hero {
   @media (max-width: 599px) {
-    .small-mt {
+
+  }
+
+  @media (--medium) {
+    .d {
       margin-top: calc($baseSize * 2);
+    }
+  }
+
+  @media (max-width: 991px) {
+    .b {
+      margin-top: calc($baseSize * 2);
+    }
+  }
+
+  @media (max-width: 599px) {
+    .b {
+      margin-bottom: calc($baseSize * 2);
+    }
+
+    .stick-bottom {
+      position: relative;
+
+      width: 100%;
+    }
+
+    .d {
+      margin-bottom: calc($baseSize * 4);
     }
   }
 }

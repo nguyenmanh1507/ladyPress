@@ -16,17 +16,21 @@
 }
 
 ::-webkit-input-placeholder {
+  font-size: calc($baseSize * 0.88);
   color: $white;
 }
 
 :-moz-placeholder { /* Firefox 18- */
+  font-size: calc($baseSize * 0.88);
   color: $white;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
+  font-size: calc($baseSize * 0.88);
   color: $white;
 }
 
 :-ms-input-placeholder {
+  font-size: calc($baseSize * 0.88);
   color: $white;
 }

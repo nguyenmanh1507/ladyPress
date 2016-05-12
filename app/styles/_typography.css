@@ -70,6 +70,10 @@ blockquote {
   font-size: calc($baseSize * 1.5);
 }
 
+.text-normal {
+  font-size: $baseSize;
+}
+
 .text-small {
   font-size: calc($baseSize * 0.75);
 }

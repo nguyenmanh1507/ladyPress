@@ -1,4 +1,34 @@
-.post {
+@b post {
+
+  @m a {
+    position: relative;
+    z-index: 10;
+
+    max-width: 900px;
+    width: 100%;
+    margin: calc(-$baseSize * 3) auto 0;
+    padding: calc($baseSize * 5) calc($baseSize * 3) calc($baseSize * 3);
+
+    text-align: justify;
+
+    background: $alabaster;
+
+    @media (--large) {
+      margin-top: 0;
+    }
+
+    @media (--small) {
+      padding-left: $baseSize;
+      padding-right: $baseSize;
+
+      text-align: left;
+    }
+  }
+
+  @e ribbon {
+    position: absolute;
+    @mixin ribbon;
+  }
 
   blockquote {
     padding: $baseSize;

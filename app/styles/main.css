@@ -33,5 +33,6 @@ body {
 @import "components/media";
 @import "components/frame";
 @import "components/map-canvas";
+@import "components/card";
 
 @import "helpers";
